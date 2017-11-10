@@ -21,7 +21,8 @@ if (n<1){console.log("Введіть мінімум  2 параметра")}
 
     }
 
-    console.log('min=',minn);
+
+    return minn;
 
 }
 
@@ -43,7 +44,8 @@ function serArfm() {
     console.log('Кількість чисел=',n+1);
      var s=sum/(n+1);
 
-    console.log('Середнє арифметичне=',s);
+
+    return s;
 
 }
 
@@ -58,18 +60,16 @@ function step() {
     var b=arr[0];
     var c=arr[1];
 
-
-    if (n > 1) {
+ if (b===0) {a=0;console.log(a);}
+  else  if (n > 1) {
         console.log('Не коректний ввід')
     }
     else if (n === 0) {
         a = arr[0] * arr[0];
-        console.log(a);
     } else if ( c>0) {
         for (var i = 0; i < c; i++) {
             a *= arr[0];
         }
-        console.log(a);
     } else if (c < 0) {
 
         for (var i = 1; i < (-c); i++) {
@@ -78,6 +78,7 @@ function step() {
         }
 
         a = 1 / b;
-        console.log(a);
-    } else if (b===0) {a=0;console.log(a);}
+
+    }
+    return a;
 }
