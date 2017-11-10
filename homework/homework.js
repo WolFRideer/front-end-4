@@ -1,5 +1,7 @@
 "use strict";
-
+console.log('Для пошуку мінімального використайте функцію min()');
+console.log('Для пошуку середнього арифметичного  використайте serArfm() ');
+console.log('Для підняття до степеня використайте step()');
 
 function min() {
     var args = [];
@@ -8,7 +10,7 @@ function min() {
         var n = i;
 
     }
-
+if (n<1){console.log("Введіть мінімум  2 параметра")}
     var minn=args[0];
     for (i=1;i < arguments.length;i++){
         if(minn>=args[i])
@@ -30,35 +32,52 @@ function serArfm() {
         args[i] = arguments[i];
         var n = i;
     }
+    if (n<1){console.log("Введіть мінімум  2 параметра")}
     var sum=0;
     for (var i = 0;i < arguments.length;i++){
         sum+=args[i];
     }
 
 
-    console.log('Suma=',sum);
-    console.log('Kilkist chusel=',n+1);
+    console.log('Сума=',sum);
+    console.log('Кількість чисел=',n+1);
      var s=sum/(n+1);
 
-    console.log('S=',s);
+    console.log('Середнє арифметичне=',s);
 
 }
 
 function step() {
     var arr = [];
-    var a=1;
-    for (var i=0;i<arguments.length;i++) {
+    var a = 1;
+    for (var i = 0; i < arguments.length; i++) {
         arr[i] = arguments[i];
-        var n=i;
+        var n = i;
 
     }
-    if (n>1) {console.log('Ne korektnuy vvid') }
-    else if (n===0) { a=arr[0]*arr[0];   console.log (a); }   else if (n===1){
-        for (var i=0;i<arr[1];i++){
-            a*=arr[0];
+    var b=arr[0];
+    var c=arr[1];
+
+
+    if (n > 1) {
+        console.log('Не коректний ввід')
+    }
+    else if (n === 0) {
+        a = arr[0] * arr[0];
+        console.log(a);
+    } else if ( c>0) {
+        for (var i = 0; i < c; i++) {
+            a *= arr[0];
         }
-        console.log (a);
-    }
+        console.log(a);
+    } else if (c < 0) {
 
+        for (var i = 1; i < (-c); i++) {
+        b*= arr[0];
 
+        }
+
+        a = 1 / b;
+        console.log(a);
+    } else if (b===0) {a=0;console.log(a);}
 }
