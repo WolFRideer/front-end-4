@@ -48,7 +48,6 @@ function serArfm() {
     return s;
 
 }
-
 function step() {
     var arr = [];
     var a = 1;
@@ -60,8 +59,8 @@ function step() {
     var b=arr[0];
     var c=arr[1];
 
- if (b===0) {a=0;console.log(a);}
-  else  if (n > 1) {
+    if (b===0) {a=0;console.log(a);}
+    else  if (n > 1) {
         console.log('Не коректний ввід')
     }
     else if (n === 0) {
@@ -73,7 +72,7 @@ function step() {
     } else if (c < 0) {
 
         for (var i = 1; i < (-c); i++) {
-        b*= arr[0];
+            b*= arr[0];
 
         }
 
