@@ -28,24 +28,20 @@ if (n<1){console.log("Введіть мінімум  2 параметра")}
 
 function serArfm() {
     var args = [];
-
+    var sum=0;
+    if (n<1){console.log("Введіть мінімум  2 параметра")}
     for (var i = 0;i < arguments.length;i++){
         args[i] = arguments[i];
-        var n = i;
-    }
-    if (n<1){console.log("Введіть мінімум  2 параметра")}
-    var sum=0;
-    for (var i = 0;i < arguments.length;i++){
         sum+=args[i];
+        var n=i;
     }
-
 
     console.log('Сума=',sum);
     console.log('Кількість чисел=',n+1);
-     var s=sum/(n+1);
+    return  sum/(n+1);
 
 
-    return s;
+
 
 }
 function step() {
@@ -81,3 +77,5 @@ function step() {
     }
     return a;
 }
+
+
